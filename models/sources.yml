@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: public
+    schema: public
+    tables:
+      - name: uniswap_pools
+      - name: uniswap_pools_timestamp
+      - name: uniswap_pools_event_logs
+      - name: uniswap_pools_details
+      - name: uniswap_pools_tokens_metadata
+      - name: uniswap_pools_with_tokens
+      - name: uniswap_pools_token_prices_historical
