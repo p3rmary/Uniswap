@@ -1,0 +1,44 @@
+name: "uniswap_pools"
+version: "1.0.0"
+config-version: 2
+
+profile: "uniswap_profile"
+
+# Define paths
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+models:
+  uniswap_pools:
+    +materialized: view
+    staging:
+      +materialized: table
+      +schema: staging
+      +enabled: true
+
+seeds:
+  uniswap_pools:
+    +schema: raw
+    uniswap_pools_tokens_metadata:
+      +column_types:
+        token: text
+        name: text
+        symbol: text
+        decimals: numeric
+
+    uniswap_pools_with_tokens:
+      +column_types:    
+         pool_address: text
+         token0: text
+         token1: text
+         fee: numeric
+
+    uniswap_pools_token_prices_historical:
+      +column_types:
+         token: text
+         timestamp : text 
+         price: numeric
+
+ 
