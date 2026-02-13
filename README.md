@@ -1,8 +1,5 @@
 # Uniswap
-
-Uniswap Swap Analytics Pipeline
-An automated, end-to-end data engineering pipeline that extracts, transforms, and visualizes Uniswap V3 liquidity pool activity.
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 This project bridges the gap between raw on-chain events and high-level financial intelligence, specifically targeting high-liquidity pools (TVL > $1M) during the period of Dec 25, 2025, to Jan 27, 2026.
 
 ## Architecture & Data Flow
