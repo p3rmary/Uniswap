@@ -2,6 +2,7 @@
 
 ## Overview
 This project implements a fully automated analytics pipeline that extracts, transforms, and visualizes Uniswap pool swap activity. The pipeline tracks major liquidity pools (TVL > $1M) and provides actionable insights through real-time dashboards.
+
 Analysis Period: December 25, 2025 - January 27, 2026
 
 ### Key Features
@@ -30,10 +31,10 @@ Raw swap events are extracted from Uniswap v3 pool contracts using:
 Event Signature: ``Swap(address indexed sender, address indexed recipient, int256 amount0, int256 amount1, uint160 sqrtPriceX96, uint128 liquidity, int24 tick)``
 Method: Direct contract ABI calls via Ethereum public RPC
 Metadata Retrieved:
-Pool address
-Token0/Token1 addresses and symbols
-Fee tier
-Block timestamp and number
+``Pool address``
+``Token0``/``Token1`` addresses and symbols
+``Fee`` tier
+``Block timestamp and number``
 
 2. Transformation (dbt)
 The dbt layer applies a series of modular transformations:
@@ -53,8 +54,7 @@ marts/
 └──fact_burns.sql                  # final burn table (liquidity removed)
 
 ```
-### Key Transformations:
-
+Key Transformations:
 - Token amount normalization (accounting for decimals)
 - USD value calculation using price oracles
 - Fee computation (in both token terms and USD)
