@@ -34,12 +34,9 @@ Method: Direct contract ABI calls via Ethereum public RPC
 
 Metadata Retrieved:
 
-``Pool address``
-
-``Token0``/``Token1`` addresses and symbols
-
-``Fee`` tier
-
+``Pool address``,
+``Token0``/``Token1`` addresses and symbols,
+``Fee`` tier,
 ``Block timestamp and number``
 
 
