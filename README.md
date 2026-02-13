@@ -33,7 +33,6 @@ Event Signature: ``Swap(address indexed sender, address indexed recipient, int25
 Method: Direct contract ABI calls via Ethereum public RPC
 
 Metadata Retrieved:
-
 ``Pool address``,
 ``Token0``/``Token1`` addresses and symbols,
 ``Fee`` tier,
@@ -82,3 +81,22 @@ Dune Analytics dashboard queries Supabase via LiveQuery, displaying:
 - Fee generation analytics
 - Liquidity depth over time
 
+## Project structure
+```
+uniswap-analytics-pipeline/
+├── dbt/
+│   ├── models/
+│   │   ├── staging/
+│   │   └──  marts/
+│   ├── macros/
+│   └── dbt_project.yml
+├── scripts/
+│   ├── extract_pool_events.py
+│   ├── pool_details.py
+│   └── usd_prices.py
+└── README.md
+
+```
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Dashboard : https://dune.com/permary/uniswap
