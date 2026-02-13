@@ -29,12 +29,16 @@ Analysis Period: December 25, 2025 - January 27, 2026
 Raw swap events are extracted from Uniswap v3 pool contracts using:
 
 Event Signature: ``Swap(address indexed sender, address indexed recipient, int256 amount0, int256 amount1, uint160 sqrtPriceX96, uint128 liquidity, int24 tick)``
+
 Method: Direct contract ABI calls via Ethereum public RPC
+
 Metadata Retrieved:
+
 ``Pool address``
 ``Token0``/``Token1`` addresses and symbols
 ``Fee`` tier
 ``Block timestamp and number``
+
 
 2. Transformation (dbt)
 The dbt layer applies a series of modular transformations:
